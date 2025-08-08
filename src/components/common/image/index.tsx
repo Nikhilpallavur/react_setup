@@ -32,14 +32,14 @@ export const CachedImage: React.FC<CachedImageProps> = ({
       <img
         src={imgSrc}
         alt={alt}
-        className="h-full w-full rounded-xl object-cover"
+        className='h-full w-full rounded-xl object-cover'
         onError={handleError}
-        loading="lazy"
+        loading='lazy'
       />
       {error && (
         <button
           onClick={handleRetry}
-          className="absolute bottom-2 right-2 rounded-md bg-black/70 px-2 py-1 text-xs text-white"
+          className='absolute bottom-2 right-2 rounded-md bg-black/70 px-2 py-1 text-xs text-white'
         >
           Retry
         </button>

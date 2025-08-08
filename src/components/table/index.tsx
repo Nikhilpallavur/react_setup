@@ -34,7 +34,7 @@ export const TableComponent = <T extends AnyObjectType>({
     let columnsResult = [...columns];
     if (loading && columnsResult.length > 0) {
       // columnsResult.pop();
-      const result = columnsResult.map(obj => ({
+      const result = columnsResult.map((obj) => ({
         ...obj,
         render: undefined,
       }));
@@ -48,7 +48,7 @@ export const TableComponent = <T extends AnyObjectType>({
 
   const handlePageChange = (page: number, pageSize: number) => {
     try {
-      setPaginationData(prev => ({
+      setPaginationData((prev) => ({
         ...prev,
         pageNo: page,
         pageSize: pageSize,
@@ -59,15 +59,15 @@ export const TableComponent = <T extends AnyObjectType>({
   };
 
   return (
-    <div className="h-full w-full">
+    <div className='h-full w-full'>
       {headerText && <CommonHederText value={headerText} />}
       <CustomTable<T>
         dataSource={loading ? skeltonData.data : dataSource}
         columns={loading ? skeltonData.columns : columns}
-        onRowClick={record => handleClick(record as T)}
+        onRowClick={(record) => handleClick(record as T)}
       />
       {paginationData.total > PAGINATION_INITIAL_DATA.pageSize && (
-        <div className="flex w-full items-center justify-center">
+        <div className='flex w-full items-center justify-center'>
           <CustomPagination
             pageSize={paginationData.pageSize}
             current={paginationData.pageNo}

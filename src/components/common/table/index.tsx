@@ -24,14 +24,14 @@ export const CustomTable = <T extends AnyObjectType>({
   };
 
   return (
-    <div className="h-full w-full overflow-scroll">
-      <table className="w-full border-separate border-spacing-y-2">
-        <thead className="w-full">
-          <tr className="bg-table-header-bg-color w-full bg-blue-600 text-white">
+    <div className='h-full w-full overflow-scroll'>
+      <table className='w-full border-separate border-spacing-y-2'>
+        <thead className='w-full'>
+          <tr className='bg-table-header-bg-color w-full bg-blue-600 text-white'>
             {columns.map((column, columnIndex) => (
               <th
                 key={column?.title}
-                className="bg-app-color font-medium text-white"
+                className='bg-app-color font-medium text-white'
                 style={{
                   textAlign: column?.align ?? 'left',
                   padding: '.8em 1em',
@@ -47,18 +47,18 @@ export const CustomTable = <T extends AnyObjectType>({
             ))}
           </tr>
         </thead>
-        <tbody className="w-full">
+        <tbody className='w-full'>
           {dataSource?.length > 0 &&
             dataSource.map((row, rowIndex) => (
               <tr
                 key={`commonTable-${row?.id ?? rowIndex}`}
-                className="shadow-medium cursor-pointer bg-white"
+                className='shadow-medium cursor-pointer bg-white'
                 onClick={() => handleRowClick(row, rowIndex)}
               >
                 {columns.map((column, columnIndex) => (
                   <td
                     key={column?.title}
-                    className="font-medium shadow"
+                    className='font-medium shadow'
                     style={{
                       color: 'black',
                       textAlign: column?.align ?? 'left',
@@ -84,7 +84,7 @@ export const CustomTable = <T extends AnyObjectType>({
         noDataContainer ? (
           noDataContainer
         ) : (
-          <div className="flex h-full w-auto items-center justify-center bg-slate-50 text-xl text-slate-300">
+          <div className='flex h-full w-auto items-center justify-center bg-slate-50 text-xl text-slate-300'>
             No Data
           </div>
         )

@@ -6,5 +6,5 @@ export const useAppSelector: TypedUseSelectorHook<RootState> = useSelector;
 // Use throughout your app instead of plain `useDispatch` and `useSelector`
 export const useAppDispatch = () => useDispatch<AppDispatch>();
 // Selector hook for accessing theme data in components
-export const useCurrentTheme = () => useAppSelector(state => state.theme);
-export const useCurrentPermission = () => useAppSelector(state => state.permissions);
+export const useCurrentTheme = () => useAppSelector((state) => state.theme);
+export const useCurrentPermission = () => useAppSelector((state) => state.permissions);

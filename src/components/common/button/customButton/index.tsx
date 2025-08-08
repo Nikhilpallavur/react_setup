@@ -12,7 +12,7 @@ interface CustomButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   loading?: boolean;
 }
 
-export const CustomButton: React.FC<CustomButtonProps> = memo(props => {
+export const CustomButton: React.FC<CustomButtonProps> = memo((props) => {
   return (
     <button
       {...props}
@@ -26,7 +26,7 @@ export const CustomButton: React.FC<CustomButtonProps> = memo(props => {
           src={props?.iconForBtn}
           width={50}
           height={50}
-          alt="image"
+          alt='image'
           className={`mr-2 h-4 w-4 ${props?.iconForBtnContainerByProps}`}
         />
       )}

@@ -19,7 +19,7 @@ export const ProfileCard = memo(({ expanded, isMobileScreen, onclickTab }: props
       <div className={`${expanded ? 'gap-x-2' : ''} flex items-center`}>
         <img
           src={ICONS.profile}
-          alt=""
+          alt=''
           className={`aspect-square w-9 object-contain ${isMobileScreen && !expanded ? 'hidden' : 'block'} delay-300`}
         />
 

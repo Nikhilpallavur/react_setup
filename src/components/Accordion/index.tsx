@@ -19,11 +19,11 @@ const Accordion = <T extends { id: number }>({ data, renderItem }: AccordionProp
   };
 
   return (
-    <div className="flex h-max flex-col">
+    <div className='flex h-max flex-col'>
       {data.map((group, index) => (
         <div key={group.groupName}>
           <div
-            className="flex cursor-pointer items-center justify-between border-b border-gray-300 bg-slate-800 px-4 py-2 text-white"
+            className='flex cursor-pointer items-center justify-between border-b border-gray-300 bg-slate-800 px-4 py-2 text-white'
             onClick={() => handleToggle(index)}
           >
             {group.groupName}

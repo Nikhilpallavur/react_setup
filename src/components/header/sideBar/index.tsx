@@ -18,8 +18,8 @@ export const SideBarHeader = memo((props: propsType) => {
         onClick={() => onclickTab(ROUTE_NAME.dashboard)}
         className={`flex items-center gap-x-2`}
       >
-        <div className="flex h-8 w-8 items-center justify-center overflow-hidden rounded-full bg-white">
-          <img src={appTheme.image} alt="" className={`h-5 w-5 object-contain`} />
+        <div className='flex h-8 w-8 items-center justify-center overflow-hidden rounded-full bg-white'>
+          <img src={appTheme.image} alt='' className={`h-5 w-5 object-contain`} />
         </div>
         <span
           className={`line-clamp-1 ${FONT.headerTextNormal} font-semibold text-white ${!isMobileScreen && !expanded ? 'w-0' : 'w-auto'} duration-200`}
@@ -34,30 +34,30 @@ export const SideBarHeader = memo((props: propsType) => {
         expanded ? (
           <button onClick={onClickExpand}>
             <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth="1.5"
-              stroke="currentColor"
-              className="size-6"
+              xmlns='http://www.w3.org/2000/svg'
+              fill='none'
+              viewBox='0 0 24 24'
+              strokeWidth='1.5'
+              stroke='currentColor'
+              className='size-6'
             >
-              <path strokeLinecap="round" strokeLinejoin="round" d="M6 18 18 6M6 6l12 12" />
+              <path strokeLinecap='round' strokeLinejoin='round' d='M6 18 18 6M6 6l12 12' />
             </svg>
           </button>
         ) : (
           <button onClick={onClickExpand}>
             <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth="1.5"
-              stroke="white"
-              className="size-6"
+              xmlns='http://www.w3.org/2000/svg'
+              fill='none'
+              viewBox='0 0 24 24'
+              strokeWidth='1.5'
+              stroke='white'
+              className='size-6'
             >
               <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                strokeLinecap='round'
+                strokeLinejoin='round'
+                d='M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5'
               />
             </svg>
           </button>
@@ -65,12 +65,12 @@ export const SideBarHeader = memo((props: propsType) => {
       ) : (
         <div
           onClick={onClickExpand}
-          className="absolute right-[-1.35rem] top-2 flex h-5 w-5 items-center justify-center rounded-full bg-blue-600"
+          className='absolute right-[-1.35rem] top-2 flex h-5 w-5 items-center justify-center rounded-full bg-blue-600'
           style={{ backgroundColor: appTheme.activeButtonBgColor }}
         >
           <img
             src={ICONS.back}
-            alt=""
+            alt=''
             className={`aspect-square w-2 object-contain ${expanded ? '' : 'rotate-180'} duration-1000`}
           />
         </div>

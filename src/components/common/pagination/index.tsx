@@ -127,7 +127,7 @@ export const CustomPagination: React.FC<PaginationProps> = ({
 
   return (
     <div className={`flex items-center justify-between ${className}`} role={role}>
-      <div className="flex items-center space-x-2">
+      <div className='flex items-center space-x-2'>
         <button
           className={`rounded px-3 py-1 ${current === 1 ? 'bg-gray-300' : 'bg-gray-200 hover:bg-gray-400'}`}
           disabled={current === 1 || disabled}
@@ -147,7 +147,7 @@ export const CustomPagination: React.FC<PaginationProps> = ({
                 {itemRender ? itemRender(page, 'page', <span>{page}</span>) : page}
               </button>
             ) : (
-              <span key={index} className="px-3 py-1">
+              <span key={index} className='px-3 py-1'>
                 ...
               </span>
             );
@@ -161,11 +161,11 @@ export const CustomPagination: React.FC<PaginationProps> = ({
         </button>
         {showSizeChanger && total > totalBoundaryShowSizeChanger && (
           <select
-            className="rounded bg-gray-200 py-1 pl-10"
+            className='rounded bg-gray-200 py-1 pl-10'
             value={pageSize}
             onChange={handlePageSizeChange}
           >
-            {pageSizeOptions.map(size => (
+            {pageSizeOptions.map((size) => (
               <option key={size} value={size}>
                 {size} / page
               </option>

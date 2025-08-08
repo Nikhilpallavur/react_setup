@@ -44,7 +44,7 @@ const permissionsSlice = createSlice({
         value: action.payload,
       });
     },
-    initializePermissions: state => {
+    initializePermissions: (state) => {
       const storedPermissions = fetchLocalData<PermissionData>(LOCAL_STORAGE_KEYS.permission);
       if (storedPermissions) {
         state.role = storedPermissions.role;

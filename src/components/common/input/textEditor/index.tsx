@@ -9,8 +9,8 @@ type propsType = {
 export function CommonTextEditor({ onChange, value, disabled }: propsType) {
   return (
     <ReactQuill
-      theme="snow"
-      className="h-full w-full"
+      theme='snow'
+      className='h-full w-full'
       value={value}
       onChange={onChange}
       readOnly={disabled}

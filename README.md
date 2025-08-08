@@ -16,11 +16,11 @@ This project is a boilerplate setup for a React application with TypeScript. It 
 
 1. Clone the repository:
     ```bash
-    git clone https://github.com/Nikhilpallavurk/react_setup.git
+    git clone https://github.com/krishnaprasad0/E-commerce-Admin-Panel.git
     ```
 2. Navigate to the project directory:
     ```bash
-    cd react_setup
+    cd E-commerce-Admin-Panel
     ```
 3. Install dependencies using `pnpm`:
     ```bash
@@ -86,9 +86,6 @@ Integrated into the project for utility-first styling.
     ```
 5. Open a pull request.
 
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
 ## Acknowledgements
 

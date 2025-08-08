@@ -6,7 +6,7 @@ export const hasPermission = (
   permissionType: string
 ): boolean => {
   if (permissionsControl?.modules && permissionsControl?.modules?.length > 0) {
-    const module = permissionsControl.modules.find(item => item.name === moduleName);
+    const module = permissionsControl.modules.find((item) => item.name === moduleName);
     return module ? module.permissions[permissionType as keyof ModulePermissions] : false;
   }
   return false;

@@ -9,7 +9,7 @@ interface CustomInputProps extends InputHTMLAttributes<HTMLInputElement> {
   containerClassName?: string;
 }
 
-export const CustomInput: React.FC<CustomInputProps> = memo(props => {
+export const CustomInput: React.FC<CustomInputProps> = memo((props) => {
   const {
     label,
     suffix,
@@ -34,7 +34,7 @@ export const CustomInput: React.FC<CustomInputProps> = memo(props => {
         </label>
       )}
 
-      <div className="relative flex items-center">
+      <div className='relative flex items-center'>
         <input
           id={id}
           disabled={disabled}
@@ -51,8 +51,8 @@ export const CustomInput: React.FC<CustomInputProps> = memo(props => {
         )}
 
         {allowClear && value && !disabled && (
-          <div className="absolute right-10 flex items-center justify-center">
-            <div className="rounded-full bg-slate-300/30 px-1">
+          <div className='absolute right-10 flex items-center justify-center'>
+            <div className='rounded-full bg-slate-300/30 px-1'>
               <button onClick={handleClear}>🅧</button>
             </div>
           </div>

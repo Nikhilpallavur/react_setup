@@ -24,7 +24,7 @@ export const TabCard = memo(
         onMouseLeave={() => setShowTooltip(false)}
       >
         <div className={`flex min-h-5 items-center gap-x-3 py-2.5 duration-150`}>
-          <img src={image} alt="" className={`aspect-square w-4 object-contain`} />
+          <img src={image} alt='' className={`aspect-square w-4 object-contain`} />
 
           <span
             className={`${expanded ? 'h-full' : 'h-0'} line-clamp-1 text-sm font-normal duration-200`}
@@ -33,7 +33,7 @@ export const TabCard = memo(
           </span>
 
           {!isMobileScreen && !expanded && showTooltip && (
-            <div className="absolute left-16 w-max rounded-md bg-black p-2">
+            <div className='absolute left-16 w-max rounded-md bg-black p-2'>
               <span className={`line-clamp-1 text-sm font-normal`}>{name}</span>
             </div>
           )}

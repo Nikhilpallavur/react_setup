@@ -57,47 +57,47 @@ const LoginForm: React.FC = () => {
       onSubmit={handleSubmit}
       className={`"w-full px-[2rem] py-9 text-[.9rem] sm:max-w-md sm:rounded-card-radius sm:px-9 sm:shadow-[15px_15px_20px_#ffffff_inset,15px_15px_20px_#cbd5e1]`}
     >
-      <div className="flex flex-col items-center">
+      <div className='flex flex-col items-center'>
         <div className={`mb-10 sm:mb-5 ${FONT.cardHeaderTextSmall}`}>{CARD_HEADER_TEXT.login}</div>
       </div>
-      <div className="mb-3 sm:mb-6">
-        <label htmlFor="userId" className={`block text-gray-700 ${FONT.contentText}`}>
+      <div className='mb-3 sm:mb-6'>
+        <label htmlFor='userId' className={`block text-gray-700 ${FONT.contentText}`}>
           {INPUT_TEXT.userId}
         </label>
         <CustomInput
-          onChange={e => setUserId(e.target.value)}
+          onChange={(e) => setUserId(e.target.value)}
           required
           value={userId}
-          type="email"
+          type='email'
         />
       </div>
       <div>
-        <label htmlFor="password" className={`${FONT.contentText} block text-gray-700`}>
+        <label htmlFor='password' className={`${FONT.contentText} block text-gray-700`}>
           {INPUT_TEXT.password}
         </label>
-        <CustomInput onChange={e => setPassword(e.target.value)} required value={password} />
+        <CustomInput onChange={(e) => setPassword(e.target.value)} required value={password} />
       </div>
-      <div className="mb-4 sm:mb-8">
-        <LinkButton type="button" title={BUTTON_TEXT.forgotPassword} />
+      <div className='mb-4 sm:mb-8'>
+        <LinkButton type='button' title={BUTTON_TEXT.forgotPassword} />
       </div>
-      <div className="mb-10 sm:mb-4">
-        <div className="flex items-start">
+      <div className='mb-10 sm:mb-4'>
+        <div className='flex items-start'>
           <div>
             <input
-              type="checkbox"
+              type='checkbox'
               checked={isAccepted}
-              onChange={e => setIsAccepted(e.target.checked)}
-              className="form-checkbox"
+              onChange={(e) => setIsAccepted(e.target.checked)}
+              className='form-checkbox'
               required
             />
           </div>
           <div className={`ml-2 ${FONT.contentText}`}>
             I accept the{' '}
-            <a href="#" className="text-blue-600">
+            <a href='#' className='text-blue-600'>
               terms of use
             </a>{' '}
             and{' '}
-            <a href="#" className="text-blue-600">
+            <a href='#' className='text-blue-600'>
               privacy policy
             </a>
           </div>
@@ -113,7 +113,7 @@ const LoginForm: React.FC = () => {
 
 const App: React.FC = () => {
   return (
-    <div className="flex h-screen w-screen flex-col items-center justify-center bg-app-bg-color">
+    <div className='flex h-screen w-screen flex-col items-center justify-center bg-app-bg-color'>
       <LoginForm />
     </div>
   );

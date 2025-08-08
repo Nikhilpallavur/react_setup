@@ -57,7 +57,7 @@ function ExampleDashBoard() {
         backgroundColor: appTheme.backgroundColor,
       }}
     >
-      <div className="z-50">
+      <div className='z-50'>
         <div
           className={`absolute ${isMobileScreen && expanded ? 'h-full !opacity-100' : 'h-0'} w-full sm:h-screen ${isMobileScreen ? 'overflow-hidden' : 'p-2 pr-3'} duration-300 sm:relative sm:h-auto sm:w-auto`}
         >
@@ -76,7 +76,7 @@ function ExampleDashBoard() {
               />
             </div>
             <div className={`${paddingHorizontal} mt-6`}>
-              {SIDEBAR_ITEMS.map(item => {
+              {SIDEBAR_ITEMS.map((item) => {
                 return (
                   <TabCard
                     key={item?.path}
@@ -110,9 +110,9 @@ function ExampleDashBoard() {
           />
         </div>
       </div>
-      <div className="flex min-h-screen w-full items-center justify-center overflow-auto">
+      <div className='flex min-h-screen w-full items-center justify-center overflow-auto'>
         <Outlet />
-        <div id="modal-root" className="z-[100]"></div>
+        <div id='modal-root' className='z-[100]'></div>
       </div>
     </div>
   );

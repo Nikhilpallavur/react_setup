@@ -11,9 +11,9 @@ const LanguageSettingsPage = () => {
 
   return (
     <div className={`h-full w-full ${PADDING.horizontalPadding}`}>
-      <MainHeader title={t('languageSettings')} className="mb-6" />
+      <MainHeader title={t('languageSettings')} className='mb-6' />
 
-      <div className="flex max-w-md flex-col gap-4">
+      <div className='flex max-w-md flex-col gap-4'>
         <CustomButton
           buttonText={t('english')}
           onClick={() => changeLanguage('en')}

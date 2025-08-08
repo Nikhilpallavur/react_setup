@@ -18,7 +18,7 @@ const CreateUserPage = () => {
   const [error, setError] = useState('');
 
   const handleChange = (key: string, value: string) => {
-    setForm(prev => ({ ...prev, [key]: value }));
+    setForm((prev) => ({ ...prev, [key]: value }));
     setError('');
   };
 
@@ -42,72 +42,72 @@ const CreateUserPage = () => {
 
   return (
     <div className={`h-full w-full ${PADDING.horizontalPadding}`}>
-      <MainHeader className="mb-[2vh] md:h-[8vh]" title={PAGE_HEADER_TEXT.createUser} />
+      <MainHeader className='mb-[2vh] md:h-[8vh]' title={PAGE_HEADER_TEXT.createUser} />
 
       {/* Full Name & Email */}
-      <div className="mb-4 grid gap-4 md:grid-cols-2">
+      <div className='mb-4 grid gap-4 md:grid-cols-2'>
         <CustomInput
-          label="Full Name"
+          label='Full Name'
           value={form.name}
-          onChange={e => handleChange('name', e.target.value)}
-          placeholder="Enter full name"
+          onChange={(e) => handleChange('name', e.target.value)}
+          placeholder='Enter full name'
           required
         />
         <CustomInput
-          label="Email"
+          label='Email'
           value={form.email}
-          onChange={e => handleChange('email', e.target.value)}
-          type="email"
-          placeholder="Enter email address"
+          onChange={(e) => handleChange('email', e.target.value)}
+          type='email'
+          placeholder='Enter email address'
           required
         />
       </div>
 
       {/* Role Dropdown */}
-      <div className="mb-4 grid gap-4 md:grid-cols-2">
+      <div className='mb-4 grid gap-4 md:grid-cols-2'>
         <CommonDropdown
-          label="User Role"
+          label='User Role'
           value={form.role}
-          onChange={val => handleChange('role', val)}
+          onChange={(val) => handleChange('role', val)}
           options={['Admin', 'Manager', 'Viewer']}
-          placeholder="Select a role"
+          placeholder='Select a role'
           required
         />
         <div />
       </div>
 
       {/* Password & Confirm Password */}
-      <div className="mb-4 grid gap-4 md:grid-cols-2">
+      <div className='mb-4 grid gap-4 md:grid-cols-2'>
         <CustomInput
-          label="Password"
+          label='Password'
           value={form.password}
-          onChange={e => handleChange('password', e.target.value)}
-          type="password"
-          placeholder="Enter password"
+          onChange={(e) => handleChange('password', e.target.value)}
+          type='password'
+          placeholder='Enter password'
           required
         />
         <CustomInput
-          label="Confirm Password"
+          label='Confirm Password'
           value={form.confirmPassword}
-          onChange={e => handleChange('confirmPassword', e.target.value)}
-          type="password"
-          placeholder="Re-enter password"
+          onChange={(e) => handleChange('confirmPassword', e.target.value)}
+          type='password'
+          placeholder='Re-enter password'
           required
         />
       </div>
 
-      {error && <p className="mb-4 text-red-500">{error}</p>}
+      {error && <p className='mb-4 text-red-500'>{error}</p>}
 
       {/* Action Buttons */}
-      <div className="mt-6 flex items-end justify-end">
-        <div className="flex w-full gap-4 md:w-96">
+      <div className='mt-6 flex items-end justify-end'>
+        <div className='flex w-full gap-4 md:w-96'>
           <CustomButton
-            buttonText="Cancel"
+            buttonText='Cancel'
             onClick={() => navigate('/users')}
             className={`${BUTTON_CLASS_NAME.commonButton} border border-gray-400 text-gray-700`}
           />
           <CustomButton
-            buttonText="Create User"
+            buttonText='Create User'
             onClick={handleSubmit}
             className={`${BUTTON_CLASS_NAME.commonButton} ${GRADIENT_BG.gradientToLeft} text-white`}
           />
