@@ -1,8 +1,10 @@
+import { memo } from 'react';
+
 type propsType = {
   width?: number;
   color?: string;
 };
-export const Spin = ({ width = 20, color = '#1C64F2' }: propsType) => {
+export const Spin = memo(({ width = 20, color = '#1C64F2' }: propsType) => {
   return (
     <svg
       aria-hidden="true"
@@ -23,4 +25,4 @@ export const Spin = ({ width = 20, color = '#1C64F2' }: propsType) => {
       ></path>
     </svg>
   );
-};
+});

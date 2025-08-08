@@ -1,25 +1,25 @@
-import { ButtonHTMLAttributes } from 'react';
+import { ButtonHTMLAttributes, memo } from 'react';
 import { Spin } from '../..';
 import { BUTTON_CLASS_NAME } from '../../../../styles';
 
 interface CustomButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   buttonText: string;
-  onClickBtn?: () => void;
+  onClick?: () => void;
   disabled?: boolean;
-  buttonContainerClassName?: string;
+  className?: string;
   iconForBtnContainerByProps?: React.CSSProperties;
   iconForBtn?: string;
   loading?: boolean;
 }
 
-export const CustomButton: React.FC<CustomButtonProps> = (props) => {
+export const CustomButton: React.FC<CustomButtonProps> = memo(props => {
   return (
     <button
-      onClick={props?.loading ? undefined : props?.onClickBtn}
-      disabled={props?.disabled ?? false}
-      className={`${BUTTON_CLASS_NAME.commonButtonStyles} ${props?.buttonContainerClassName}`}
-      style={{ cursor: props?.disabled ? 'no-drop' : 'pointer' }}
       {...props}
+      onClick={props?.loading ? undefined : props?.onClick}
+      disabled={props?.disabled ?? false}
+      className={`w-full ${BUTTON_CLASS_NAME.commonButtonStyles} ${props?.className}`}
+      style={{ cursor: props?.disabled ? 'no-drop' : 'pointer' }}
     >
       {!!props?.iconForBtn && (
         <img
@@ -30,7 +30,7 @@ export const CustomButton: React.FC<CustomButtonProps> = (props) => {
           className={`mr-2 h-4 w-4 ${props?.iconForBtnContainerByProps}`}
         />
       )}
-      {props?.loading ? <Spin width={20} /> : props?.buttonText ?? ''}
+      {props?.loading ? <Spin width={20} /> : (props?.buttonText ?? '')}
     </button>
   );
-};
+});

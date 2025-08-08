@@ -1,6 +1,6 @@
 // components/CustomButton.tsx
 
-import React, { ButtonHTMLAttributes } from 'react';
+import React, { ButtonHTMLAttributes, memo } from 'react';
 import { FONT } from '../../../../styles';
 interface LinkButtonType extends ButtonHTMLAttributes<HTMLButtonElement> {
   title: string;
@@ -9,7 +9,7 @@ interface LinkButtonType extends ButtonHTMLAttributes<HTMLButtonElement> {
   showIcon?: boolean;
   textClassName?: string;
 }
-const LinkButton: React.FC<LinkButtonType> = (props) => {
+const LinkButton: React.FC<LinkButtonType> = memo(props => {
   const { title, onClick, color = '#2563eb', showIcon = false, textClassName = '' } = props;
   return (
     <button {...props} onClick={onClick}>
@@ -29,6 +29,6 @@ const LinkButton: React.FC<LinkButtonType> = (props) => {
       </div>
     </button>
   );
-};
+});
 
 export default LinkButton;

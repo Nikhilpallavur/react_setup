@@ -1,5 +1,5 @@
 export const PADDING = {
-  horizontalPadding: 'px-[2rem] md:px-[5rem] xl:px-[7.5rem] min-tv:px-[12rem]',
+  horizontalPadding: 'px-[1rem] md:px-[1.5rem] min-tv:px-[3rem]',
   paddingLeft: 'pl-[2rem] md:pl-[5rem] xl:pl-[7.5rem] min-tv:pl-[12rem]',
   paddingRight: 'pr-[2rem] md:pr-[5rem] xl:pr-[7.5rem] min-tv:pr-[12rem]',
 };
@@ -8,6 +8,7 @@ export const FONT = {
   contentText: 'text-.8-rem sm:text-.9-rem font-normal',
   headerTagTextSmall: 'text-.7-rem md:text-.8-rem min-tv:text-2-rem  font-normal',
   cardHeaderTextSmall: 'text-1-rem sm:text-1.2-rem',
+  priceValueText: 'text-1-rem sm:text-1.2-rem font-bold',
   headerTextSmall: 'text-.7-rem lg:text-1-rem font-normal',
   headerTextNormal: 'text-.8-rem sm:text-1-rem font-bold',
 };

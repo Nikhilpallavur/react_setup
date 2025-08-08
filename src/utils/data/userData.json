@@ -1,0 +1,44 @@
+{
+  "message": "Login Successful",
+  "status": "Success",
+  "token": "JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjQ3NGY0MjZiMmFkYjE5OGUxM2ViNTkiLCJpYXQiOjE3MjA0MjI5NzksImV4cCI6MTcyMDUwOTM3OX0.39b32B53hUo0jFwj3cM8sCAJGUqf-Dr0tGQ2M0QG_Ao",
+  "permissionData": {
+    "_id": "6647500a6b2adb198e13eb74",
+    "role": "Admin",
+    "reportsToId": "6647500a6b2adb198e13eb74",
+    "modules": [
+      {
+        "permissions": { "view": true, "edit": true, "list": true, "add": true, "delete": true },
+        "name": 1
+      },
+      {
+        "permissions": { "view": true, "edit": true, "list": true, "add": true, "delete": true },
+        "name": 2
+      },
+      {
+        "permissions": { "view": true, "edit": true, "list": true, "add": true, "delete": true },
+        "name": 3
+      }
+    ],
+    "isDelete": false,
+    "createdAt": "2024-05-17T12:39:38.794Z",
+    "updatedAt": "2024-05-21T12:35:16.828Z",
+    "roleType": 1
+  },
+  "userData": {
+    "_id": "66474f426b2adb198e13eb59",
+    "userName": "Nikhil K",
+    "email": "nikhil.pallavur@fibonalabs.com",
+    "roleId": {
+      "_id": "6647500a6b2adb198e13eb74",
+      "role": "Admin",
+      "reportsToId": "6647500a6b2adb198e13eb74",
+      "roleType": 1
+    },
+    "reporterId": "6647500a6b2adb198e13eb74",
+    "contactNumber": "6238240877",
+    "isDelete": false,
+    "createdAt": "2024-05-17T12:36:18.970Z",
+    "updatedAt": "2024-07-08T07:16:16.193Z"
+  }
+}

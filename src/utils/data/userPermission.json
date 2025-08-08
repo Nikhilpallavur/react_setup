@@ -1,0 +1,54 @@
+{
+  "admin": {
+    "role": "Admin",
+    "modules": [
+      {
+        "name": 1,
+        "permissions": {
+          "view": true,
+          "edit": true,
+          "list": true,
+          "add": true,
+          "delete": true
+        }
+      },
+      {
+        "name": 2,
+        "permissions": {
+          "view": true,
+          "edit": true,
+          "list": true,
+          "add": true,
+          "delete": true
+        }
+      }
+    ],
+    "roleType": 1
+  },
+  "employee": {
+    "role": "Employee",
+    "modules": [
+      {
+        "name": 1,
+        "permissions": {
+          "view": true,
+          "edit": true,
+          "list": true,
+          "add": true,
+          "delete": true
+        }
+      },
+      {
+        "name": 2,
+        "permissions": {
+          "view": true,
+          "edit": true,
+          "list": true,
+          "add": true,
+          "delete": true
+        }
+      }
+    ],
+    "roleType": 1
+  }
+}
